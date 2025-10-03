@@ -34,11 +34,11 @@ jobs:
             ${{ steps.RunUnitTest.outputs.CODE_COVERAGE }}
           format: MARKDOWN
   build:
-    uses: TARGET_ORG/PROJECT_NAME-workflows/container-build.yaml
+    uses: ldorg/ld-hackers-workflows/container-build.yaml
     vars: inherit
     secrets: inherit
     inputs:
       appName: hackers-web
       versionStart: "1.0"
-      repo: TARGET_ORG/PROJECT_NAME-web
+      repo: ldorg/ld-hackers-web
     needs: test

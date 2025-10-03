@@ -16,7 +16,7 @@ on:
 
 jobs:
   deploy:
-    uses: TARGET_ORG/PROJECT_NAME-workflows/helm-deploy.yaml
+    uses: ldorg/ld-hackers-workflows/helm-deploy.yaml
     vars: inherit
     secrets: inherit
     inputs:
@@ -25,4 +25,4 @@ jobs:
       environment: ${{ inputs.environment }}
       hostname: hackers-web.${{ inputs.environment }}.preview.cb-demos.io
       appName: hackers-web
-      repo: TARGET_ORG/PROJECT_NAME-web
+      repo: ldorg/ld-hackers-web
